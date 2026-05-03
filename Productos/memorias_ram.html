@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Componentes Tecnológicos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="../inicio.html">TechStore</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarPrincipal">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../inicio.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar...">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                    <button type="button" class="btn btn-dark position-relative ms-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                        <i class="bi bi-cart-check-fill"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5>Carrito (<span id="modalCartCount">0</span>)</h5>
+                </div>
+                <div class="modal-body" id="modalCarritoItems">Carrito vacío</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+<button type="button" class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Tabla de Procesadores</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Capacidad</th>
+                        <th>Velocidad</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kingston FURY Beast DDR5</td>
+                        <td>Memoria RAM</td>
+                        <td>32GB</td>
+                        <td>6000 MHz</td>
+                        <td>$620</td>
+                        <td><span class="badge bg-success">Disponible</span></td>
+                    </tr>
+                    <tr>
+                        <td>Patriot Viper 4</td>
+                        <td>Memoria RAM</td>
+                        <td>16GB</td>
+                        <td>5600 MHz</td>
+                        <td>$499</td>
+                        <td><span class="badge bg-success">Disponible</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>TechStore</h5>
+                    <p>Tu tienda confiable de componentes tecnológicos.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contacto</h5>
+                    <p>Email: ventas@techstore.com<br>Tel: +51 987 654 321</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Métodos de pago</h5>
+                    <p>Visa | Mastercard | PayPal</p>
+                    <h5>Síguenos</h5>
+                    <p>Facebook | Instagram | Twitter</p>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2026 TechStore - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script src="carrito.js"></script>
+</body>
+</html>

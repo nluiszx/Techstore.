@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Ofertas Especiales</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="inicio.html">TechStore</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarPrincipal">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="inicio.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar...">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                    <button type="button" class="btn btn-dark position-relative ms-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                        <i class="bi bi-cart-check-fill"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5>Carrito (<span id="modalCartCount">0</span>)</h5>
+                </div>
+                <div class="modal-body" id="modalCarritoItems">Carrito vacío</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+<button type="button" class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container my-5">
+
+        <div class="bg-danger text-white text-center rounded-3 p-5 mb-5 position-relative overflow-hidden">
+            <div class="position-relative">
+                <span class="badge bg-warning text-dark fs-6 mb-3">🔥 OFERTAS DEL MES 🔥</span>
+                <h1 class="display-5 fw-bold">¡Hasta 40% de descuento!</h1>
+                <p class="fs-4">Componentes seleccionados con precios increíbles por tiempo limitado</p>
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <span class="badge bg-light text-dark fs-6 p-2">⏱️ Ofertas válidas hasta agotar stock</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-warning text-center mb-4">
+            <i class="bi bi-tags-fill"></i> <strong>¡Aprovecha!</strong> Los descuentos aplican automáticamente al añadir al carrito.
+        </div>
+
+        <h2 class="text-center mb-4">🛒 Productos en Oferta</h2>
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 rounded-end mt-2 fs-7">-20%</span>
+                    <img src="https://storage.googleapis.com/imagenesimpactoperu3/products/BX8071514900K/image_1_20251211_173759_2035.webp" 
+                         class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="Procesador">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">Intel Core i9-13900K</h5>
+                        <p class="card-text text-muted small">24 núcleos, hasta 5.8 GHz</p>
+                        <div class="mt-auto">
+                            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$620 USD</span></p>
+                            <p class="fw-bold text-danger fs-5 mb-3">$496 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalOferta1">Ver Detalles</button>
+                                <button class="btn btn-danger btn-sm"><i class="bi bi-cart-plus"></i> Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalOferta1" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5>Intel Core i9-13900K - OFERTA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Precio original:</strong> $620 USD</p>
+                            <p><strong>Descuento:</strong> 20%</p>
+                            <p><strong>Precio oferta:</strong> <span class="text-danger fw-bold">$496 USD</span></p>
+                            <hr>
+                            <p>Procesador de 24 núcleos, 32 hilos, boost hasta 5.8 GHz, Socket LGA 1700.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button class="btn btn-danger">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 rounded-end mt-2">-15%</span>
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_838140-MLU72301862192_102023-O.webp" 
+                         class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="GPU">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">NVIDIA RTX 4070 Ti</h5>
+                        <p class="card-text text-muted small">12GB GDDR6X, ideal 1440p/4K</p>
+                        <div class="mt-auto">
+                            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$799 USD</span></p>
+                            <p class="fw-bold text-danger fs-5 mb-3">$679 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalOferta2">Ver Detalles</button>
+                                <button class="btn btn-danger btn-sm"><i class="bi bi-cart-plus"></i> Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalOferta2" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5>NVIDIA RTX 4070 Ti - OFERTA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Precio original:</strong> $799 USD</p>
+                            <p><strong>Descuento:</strong> 15%</p>
+                            <p><strong>Precio oferta:</strong> <span class="text-danger fw-bold">$679 USD</span></p>
+                            <hr>
+                            <p>GPU con 12GB GDDR6X, Ray Tracing 3ra gen, DLSS 3, PCIe 4.0.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button class="btn btn-danger">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 rounded-end mt-2">-25%</span>
+                    <img src="https://i5.walmartimages.com/seo/Kingston-FURY-Beast-RGB-64GB-2-x-32GB-288-Pin-PC-RAM-DDR5-5600-PC5-44800-Desktop-Memory-Model-KF556C40BBAK2-64_40bbc3a8-a1fb-4841-80dc-0b703cdb9b2a.718bd2b74b0fe84c3f1954180cd0bd3c.jpeg" 
+                         class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="RAM">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">Kingston Fury 32GB DDR5</h5>
+                        <p class="card-text text-muted small">DDR5 hasta 6000 MHz</p>
+                        <div class="mt-auto">
+                            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$150 USD</span></p>
+                            <p class="fw-bold text-danger fs-5 mb-3">$112.50 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalOferta3">Ver Detalles</button>
+                                <button class="btn btn-danger btn-sm"><i class="bi bi-cart-plus"></i> Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalOferta3" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5>Kingston Fury 32GB DDR5 - OFERTA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Precio original:</strong> $150 USD</p>
+                            <p><strong>Descuento:</strong> 25%</p>
+                            <p><strong>Precio oferta:</strong> <span class="text-danger fw-bold">$112.50 USD</span></p>
+                            <hr>
+                            <p>32GB DDR5, velocidad hasta 6000 MHz, latencia CL40, Intel XMP 3.0/AMD EXPO.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button class="btn btn-danger">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 position-relative">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 rounded-end mt-2">-30%</span>
+                    <img src="https://m.media-amazon.com/images/I/41pO5d3EaXS._SS400_.jpg" 
+                         class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="SSD">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">Samsung 980 Pro 1TB</h5>
+                        <p class="card-text text-muted small">NVMe PCIe 4.0, 7000 MB/s</p>
+                        <div class="mt-auto">
+                            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$89 USD</span></p>
+                            <p class="fw-bold text-danger fs-5 mb-3">$62.30 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalOferta4">Ver Detalles</button>
+                                <button class="btn btn-danger btn-sm"><i class="bi bi-cart-plus"></i> Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalOferta4" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5>Samsung 980 Pro 1TB - OFERTA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Precio original:</strong> $89 USD</p>
+                            <p><strong>Descuento:</strong> 30%</p>
+                            <p><strong>Precio oferta:</strong> <span class="text-danger fw-bold">$62.30 USD</span></p>
+                            <hr>
+                            <p>SSD 1TB NVMe PCIe 4.0, lectura 7000 MB/s, escritura 5000 MB/s, M.2 2280.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button class="btn btn-danger">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card bg-dark text-white text-center p-4">
+                    <h3 class="mb-3"><i class="bi bi-lightning-charge-fill"></i> Ofertas Flash</h3>
+                    <p>Válidas solo por hoy: <strong>Envío gratis</strong> en compras mayores a $100 USD</p>
+                    <div class="d-flex justify-content-center gap-4 flex-wrap">
+                        <span class="badge bg-danger p-2">🔥 2x1 en memorias RAM seleccionadas</span>
+                        <span class="badge bg-warning text-dark p-2">⚡ 15% extra con código: TECH15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>TechStore</h5>
+                    <p>Tu tienda confiable de componentes tecnológicos.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contacto</h5>
+                    <p>Email: ventas@techstore.com<br>Tel: +51 987 654 321</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Métodos de pago</h5>
+                    <p>Visa | Mastercard | PayPal</p>
+                    <h5>Síguenos</h5>
+                    <p>Facebook | Instagram | Twitter</p>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2026 TechStore - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script src="carrito.js"></script>
+</body>
+</html>

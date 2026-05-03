@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Componentes Tecnológicos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="inicio.html">TechStore</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarPrincipal">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="inicio.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar...">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                    <button type="button" class="btn btn-dark position-relative ms-auto btn btn-outline-light"
+                        data-bs-toggle="modal" data-bs-target="#carritoModal">
+                        <i class="bi bi-cart-check-fill"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-3">
+        <div class="alert alert-success text-center">
+            Bienvenido a TechStore 🔥 Ofertas disponibles
+        </div>
+    </div>
+
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5>Carrito (<span id="modalCartCount">0</span>)</h5>
+                </div>
+                <div class="modal-body" id="modalCarritoItems">Carrito vacío</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <button type="button" class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container my-5">
+
+        <div class="bg-primary text-white text-center rounded-3 p-5 mb-5">
+            <h1 class="display-5 fw-bold">Componentes de alto rendimiento</h1>
+            <p class="fs-4">Los mejores procesadores, tarjetas gráficas y más al mejor precio</p>
+            <button class="btn btn-light btn-lg"><a class="text-decoration-none text-dark"
+                    href="../AvanceMarcos/ofertas.html">Ver ofertas</a></button>
+        </div>
+
+        <h2 class="text-center mb-4">Categorías Destacadas</h2>
+        <div class="row text-center mb-5">
+
+            <div class="col-md-2 col-sm-4 col-6 mb-3">
+                <a href="Productos/procesadores.html" class="text-decoration-none text-dark">
+                    <div class="border rounded-3 p-3 bg-light shadow-sm">Procesadores</div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-6 mb-3">
+                <a href="Productos/tarjetas_graficas.html" class="text-decoration-none text-dark">
+                    <div class="border rounded-3 p-3 bg-light shadow-sm">Tarjetas Gráficas</div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-6 mb-3">
+                <a href="Productos/memorias_ram.html" class="text-decoration-none text-dark">
+                    <div class="border rounded-3 p-3 bg-light shadow-sm">Memorias RAM</div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-6 mb-3">
+                <a href="Productos/discos.html" class="text-decoration-none text-dark">
+                    <div class="border rounded-3 p-3 bg-light shadow-sm">Discos SSD</div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-6 mb-3">
+                <a href="Productos/fuentes_poder.html" class="text-decoration-none text-dark">
+                    <div class="border rounded-3 p-3 bg-light shadow-sm">Fuentes de Poder</div>
+                </a>
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-6 mb-3">
+                <a href="Productos/perifericos.html" class="text-decoration-none text-dark">
+                    <div class="border rounded-3 p-3 bg-light shadow-sm">Periféricos</div>
+                </a>
+            </div>
+
+        </div>
+
+        <h2 class="text-center mb-4">Productos destacados</h2>
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://storage.googleapis.com/imagenesimpactoperu3/products/BX8071514900K/image_1_20251211_173759_2035.webp"
+                        class="card-img-top p-3" style="height: 250px; object-fit: contain;" alt="Procesador">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">Intel Core i9-13900K</h5>
+                        <p class="card-text text-muted small">Procesador de 24 núcleos, hasta 5.8 GHz, LGA 1700</p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-primary fs-5 mb-3">$620 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalDetalle1">Ver Detalles</button>
+                                <button class="btn btn-success btn-sm"><i class="bi bi-cart-plus"></i> Añadir al
+                                    Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalDetalle1" tabindex="-1" aria-labelledby="modalDetalle1Label"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalDetalle1Label">Intel Core i9-13900K</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - Marca: Intel <br>
+                                        - Fabricante del CPU: Intel <br>
+                                        - Modelo de CPU: Intel Core i9-13900K <br>
+                                        - Velocidad de CPU: Hasta 5.8 GHz <br>
+                                        - Enchufe de CPU: LGA 1700 <br>
+                                        Más Características: <br>
+                                        24 núcleos (8 Performance + 16 Efficient),
+                                        32 hilos de procesamiento,
+                                        Frecuencia base: 3.0 GHz,
+                                        Boost hasta 5.8 GHz,
+                                        Caché Intel Smart Cache: 36 MB,
+                                        Arquitectura Raptor Lake,
+                                        Socket LGA 1700,
+                                        Compatible con DDR4 / DDR5,
+                                        Gráficos integrados UHD 770
+                                    </p>
+                                    <p class="fw-bold text-primary text-center fs-5">$620 USD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success">agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_838140-MLU72301862192_102023-O.webp"
+                        class="card-img-top p-3" style="height: 250px; object-fit: contain;" alt="GPU">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">NVIDIA RTX 4070 Ti</h5>
+                        <p class="card-text text-muted small">GPU de alto rendimiento con 12GB GDDR6X, ideal para
+                            1440p/4K</p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-primary fs-5 mb-3">$799 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalDetalle5">Ver Detalles</button>
+                                <button class="btn btn-success btn-sm"><i class="bi bi-cart-plus"></i> Añadir al
+                                    Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalDetalle5" tabindex="-1" aria-labelledby="modalDetalle5Label"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalDetalle5Label">RTX 4070 Ti</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - Marca: NVIDIA <br>
+                                        - Fabricante de GPU: NVIDIA <br>
+                                        - Modelo: GeForce RTX 4070 Ti <br>
+                                        - Memoria de Video: 12GB GDDR6X <br>
+                                        - Interfaz: PCIe 4.0 <br>
+                                        Más Características: <br>
+                                        Arquitectura NVIDIA Ada Lovelace,
+                                        12GB GDDR6X (192-bit),
+                                        Boost Clock hasta 2.6 GHz,
+                                        Ray Tracing 3ra generación,
+                                        DLSS 3 con IA,
+                                        PCI Express 4.0,
+                                        Salidas: HDMI 2.1 + DisplayPort 1.4a,
+                                        Ideal para gaming en 1440p / 4K
+                                    </p>
+                                    <p class="fw-bold text-primary text-center fs-5">$799 USD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://i5.walmartimages.com/seo/Kingston-FURY-Beast-RGB-64GB-2-x-32GB-288-Pin-PC-RAM-DDR5-5600-PC5-44800-Desktop-Memory-Model-KF556C40BBAK2-64_40bbc3a8-a1fb-4841-80dc-0b703cdb9b2a.718bd2b74b0fe84c3f1954180cd0bd3c.jpeg"
+                        class="card-img-top p-3" style="height: 250px; object-fit: contain;" alt="RAM">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">Kingston Fury 32GB DDR5</h5>
+                        <p class="card-text text-muted small">RAM de 32GB DDR5, hasta 6000 MHz. Estabilidad y velocidad.
+                        </p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-primary fs-5 mb-3">$150 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalDetalle9">Ver Detalles</button>
+                                <button class="btn btn-success btn-sm"><i class="bi bi-cart-plus"></i> Añadir al
+                                    Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalDetalle9" tabindex="-1" aria-labelledby="modalDetalle9Label"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalDetalle9Label">Kingston Fury 32GB DDR5</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - Marca: Kingston <br>
+                                        - Fabricante: Kingston Technology <br>
+                                        - Modelo: Kingston FURY Beast DDR5 <br>
+                                        - Capacidad: 32GB <br>
+                                        - Velocidad de Memoria: Hasta 6000 MHz <br>
+                                        - Tipo de Memoria: DDR5 <br>
+                                        Más Características: <br>
+                                        32GB (1x32GB o 2x16GB),
+                                        Velocidad: 5200 | 6000 MHz,
+                                        Latencia: CL38 | CL40,
+                                        Tecnología DDR5,
+                                        Intel XMP 3.0 / AMD EXPO,
+                                        On-Die ECC (mayor estabilidad),
+                                        PMIC integrado,
+                                        Ideal para gaming y multitarea
+                                    </p>
+                                    <p class="fw-bold text-primary text-center fs-5">$150 USD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://m.media-amazon.com/images/I/41pO5d3EaXS._SS400_.jpg" class="card-img-top p-3"
+                        style="height: 250px; object-fit: contain;" alt="SSD">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-6">Samsung 980 Pro 1TB</h5>
+                        <p class="card-text text-muted small">SSD NVMe PCIe 4.0, hasta 7000 MB/s de lectura.</p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-primary fs-5 mb-3">$89 USD</p>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalDetalle13">Ver Detalles</button>
+                                <button class="btn btn-success btn-sm"><i class="bi bi-cart-plus"></i> Añadir al
+                                    Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalDetalle13" tabindex="-1" aria-labelledby="modalDetalle13Label"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalDetalle13Label">Samsung 980 Pro 1TB</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - Marca: Samsung <br>
+                                        - Fabricante: Samsung Electronics <br>
+                                        - Modelo: 980 PRO <br>
+                                        - Capacidad: 1TB <br>
+                                        - Interfaz: PCIe 4.0 NVMe <br>
+                                        Más Características: <br>
+                                        Capacidad: 1TB,
+                                        Interfaz: PCIe 4.0 NVMe,
+                                        Velocidad lectura: hasta 7000 MB/s,
+                                        Velocidad escritura: hasta 5000 MB/s,
+                                        Formato: M.2 2280,
+                                        Controlador Samsung Elpis,
+                                        Tecnología V-NAND,
+                                        Ideal para gaming y alto rendimiento
+                                    </p>
+                                    <p class="fw-bold text-primary text-center fs-5">$89 USD</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>TechStore</h5>
+                    <p>Tu tienda confiable de componentes tecnológicos.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contacto</h5>
+                    <p>Email: ventas@techstore.com<br>Tel: +51 987 654 321</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Métodos de pago</h5>
+                    <p>Visa | Mastercard | PayPal</p>
+                    <h5>Síguenos</h5>
+                    <p>Facebook | Instagram | Twitter</p>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2026 TechStore - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="carrito.js"></script>
+</body>
+
+</html>
